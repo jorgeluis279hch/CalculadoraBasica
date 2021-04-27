@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./estilos/estilosGeneral.css">
+    <link rel="stylesheet" href="./estilos/botonesCalc.css">
+    <link rel="stylesheet" href="./icons/style.css">
+</head>
+<body>
+    <div class="calc">
+        <div class="showMenu">
+            <hr>
+            <div><span class="icon-lab"></span>Científica</div>
+            <div><span class="icon-earth"></span>Estandar</div>
+            <div><span class="icon-history"></span>Historial</div>
+            <div><span class="icon-blocked"></span>Limpiar historial</div>
+        </div>
+        <div class="menu">
+            <div class="brand"> <span class="icon-calculator"></span> Calculadora </div>
+            <span class="icon-menu" onclick="showMenu()"></span>
+            <span class="icon-contrast" onclick="darkMode()"></span>
+            <span class="icon-history" onclick="viewHistory()"></span>
+        </div>
+        <form>
+            <input type="text" class="oneBox" disabled>
+            <input type="text" class="twoBox" placeholder="0" disabled>
+            <br>
+            <input type="button" onclick="escribir(this, 5)" value="%">
+            <input type="button" onclick="elevate()" value="x²">
+            <input type="button" onclick="raiz()" value="√">
+            <input type="button" onclick="escribir(this, 1)" value="/">
+            <br>
+            <input type="button" onclick="escribir(this)" value="0">
+            <input type="button" onclick="escribir(this)" value="1">
+            <input type="button" onclick="escribir(this)" value="2">
+            <input type="button" onclick="escribir(this, 2)" value="x">
+            <br>
+            <input type="button" onclick="escribir(this)" value="3">
+            <input type="button" onclick="escribir(this)" value="4">
+            <input type="button" onclick="escribir(this)" value="5">
+            <input type="button" onclick="escribir(this, 3)" value="-">
+            <br>
+            <input type="button" onclick="escribir(this)" value="6">
+            <input type="button" onclick="escribir(this)" value="7">
+            <input type="button" onclick="escribir(this)" value="8">
+            <input type="button" onclick="escribir(this, 4)" value="+">
+            <br>
+            <input type="button" onclick="escribir(this)" value="9">
+            <input type="button" onclick="writeSimb(',')" value=",">
+            <input type="button" onclick="simbResta(this)" value="±">
+            <input type="button" onclick="result()" value="=">
+            <br>
+            <input type="button" onclick="clearBox(2)" value="CE">
+            <input type="button" onclick="clearBox()" value="C">
+            <input type="button" onclick="eliminar()" value="◄">
+        </form>
+        <div class="container notView" id="containerList">
+            <div class="ico notView" onclick="clearHistory()" ><span class="icon-blocked" title="Clear history"></span>Clear history</div>
+            <div class="historyOut notView">
+            </div>
+        </div>
+    </div>
+    <script src="./js/action.js"></script>
+    <script src="./js/interactive.js"></script>
+</body>
+</html>
